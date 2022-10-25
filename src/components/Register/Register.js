@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/UseContext';
 
 const Register = () => {
     const [accept, setAccept] = useState(false)
+    const {createUser} = useContext(AuthContext)
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -12,7 +14,14 @@ const Register = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password)
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => {
+            console.error(error)
+        })
     }
     return (
         <div>
