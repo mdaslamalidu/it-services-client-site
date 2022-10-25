@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const SummaryCart = ({course}) => {
     console.log(course)
-    const { desc, title, name, _id, img, category_id } = course;
+    const { desc, title, name, _id, img } = course;
     return (
         <div>
             <Card>

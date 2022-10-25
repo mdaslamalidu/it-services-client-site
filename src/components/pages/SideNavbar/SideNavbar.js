@@ -13,7 +13,7 @@ const SideNavbar = () => {
     }, [])
 
     return (
-        <div className='bg-black text-white p-2 sticky-top'>
+        <div className='bg-black text-white p-2 sticky-top-style'>
             <h3>Course Title: </h3>
             {
                 categories.map(category => <Link to={`/category/${category.id}`} style={{ textDecoration: "none", color: "black", }} key={category.id}> <p className='bg-warning rounded p-2 hover-style'>{category.name}</p></Link>   

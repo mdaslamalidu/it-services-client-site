@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 const Course = () => {
     const singleCourse = useLoaderData();
-    const {img, title, desc, name} = singleCourse;
+    const {img, title, desc, name, duration, price} = singleCourse;
     return (
         <div>
             <h3>This is single Course page</h3>
@@ -14,12 +14,13 @@ const Course = () => {
                 <Card.Body>
                     <h5>Course Title: <small>{title}</small></h5>
                     <h5>Course Name: <small>{name}</small></h5>
+                    <h5>Course Price: <small>{price} $</small></h5>
+                    <h5>Course Duration: <small>{duration} Months</small></h5>
                     <Card.Text>
                         {desc}
                     </Card.Text>
-                    <Link to='checkOut'><button className='btn btn-warning py-0'>CheckOut</button></Link>
+                    <Link to='/checkOut'><button className='btn btn-warning py-0'>CheckOut</button></Link>
                 </Card.Body>
-
             </Card>
         </div>
     );
