@@ -11,12 +11,11 @@ const SideNavbar = () => {
     }, [])
 
     return (
-        <div className='bg-black text-white p-2'>
+        <div className='bg-black text-white p-2 sticky-top'>
             <h3>Course Title: </h3>
             {
-                categories.map(category => <p className='bg-danger' key={category.id}>
-                    <Link to={`/category/${category.id}`}> {category.name}</Link>
-                </p>)
+                categories.map(category => <Link to={`/category/${category.id}`} style={{textDecoration: "none", color: "white"}} key={category.id}> <p>{category.name}</p></Link>    
+                )
             }
         </div>
     );
