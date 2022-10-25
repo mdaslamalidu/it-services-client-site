@@ -6,23 +6,39 @@ import { AuthContext } from '../../Context/UseContext';
 
 const Register = () => {
     const [accept, setAccept] = useState(false)
-    const {createUser} = useContext(AuthContext)
+    const { createUser, userUpdate } = useContext(AuthContext)
 
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const photoURL = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
         createUser(email, password)
         .then(result => {
             const user = result.user;
             console.log(user)
+            userProfileUpdate(name, photoURL)
         })
         .catch(error => {
             console.error(error)
         })
     }
+
+
+    const userProfileUpdate = (name, photoURL) => {
+        return userUpdate(name, photoURL)
+        .then(() => {
+            alert("Profile Update")
+        })
+        .catch(error => {
+           alert(error.message)
+        })
+    }
+
+
+
     return (
         <div>
             <Form onSubmit={handleSubmit}>

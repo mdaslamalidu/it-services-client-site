@@ -8,7 +8,7 @@ import { AuthContext } from '../../../Context/UseContext';
 
 
 const Header = () => {
-    // const {user} = useContext(AuthContext)
+    const {user} = useContext(AuthContext)
 
     return (
         <Navbar bg="light" expand="lg" className='sticky-top'>
@@ -20,8 +20,18 @@ const Header = () => {
                         <Nav.Link href="#home">Courses</Nav.Link>
                         <Nav.Link href="#link">Faq</Nav.Link>
                         <Nav.Link href="#link">Blog</Nav.Link>
-                        <Nav.Link href="#link">Login</Nav.Link>
-                        <Link to="/register">Register</Link>
+                        {
+                            user?.email ? 
+                            <Button>Logout</Button>
+                            :
+                            <>
+                                    <Link to="/login">Login</Link>
+                                    <Link to="/register">Register</Link>
+                            </>
+                        }
+
+                        
+                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
