@@ -1,6 +1,7 @@
 import React from 'react';
 
-const SummaryCart = () => {
+const SummaryCart = ({course}) => {
+    console.log(course)
     return (
         <div>
             
