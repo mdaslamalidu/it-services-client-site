@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { Button, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UseContext';
+import "./Header.css";
+import { FaUser, IconName } from "react-icons/fa";
 
 
 const Header = () => {
@@ -18,19 +20,21 @@ const Header = () => {
     }
 
     return (
-        <Navbar bg="light" expand="lg" className='sticky-top'>
+        <Navbar expand="lg" className='sticky-top header-style'>
             <Container>
-                <img style={{ height: "50px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrt6dYZqH63buWQAacIJDXWO4KAt6-exrwg&usqp=CAU" alt="" />
-                <Navbar.Brand href="#home">It Survices Institute</Navbar.Brand>
+                <Link to="/home" className='header-title'>
+                    <img style={{ height: "50px", borderRadius: "50%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrt6dYZqH63buWQAacIJDXWO4KAt6-exrwg&usqp=CAU" alt="" />
+                   It Survices Institute
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
-                    <Nav>
-                        <Nav.Link href="#home">Courses</Nav.Link>
-                        <Nav.Link href="#link">Faq</Nav.Link>
-                        <Nav.Link href="#link">Blog</Nav.Link>
+                    <Nav className='link-style align-items-center'>
+                        <Link to="/courses">Courses</Link>
+                        <Link to="/faq">Faq</Link>
+                        <Link to="/blog">Blog</Link>
                         {
                             user?.email ? 
-                            <p onClick={handleLogout}>Logout</p>
+                            <Link onClick={handleLogout}>Logout</Link>
                             :
                             <>
                                     <Link to="/login">Login</Link>
@@ -42,7 +46,7 @@ const Header = () => {
                                 user?.photoURL ?
                                     <Image title={user?.displayName} roundedCircle src={user.photoURL} style={{height: "40px", width: "40px", cursor: "pointer"}}></Image>
                                     :
-                                    <p>photo nai</p>
+                                    <FaUser></FaUser>
                             }
 
                         {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_JMhOGTiIiNQt0WyWI5rhTA6Qlbi92BM0wbrkC7k&s */}
