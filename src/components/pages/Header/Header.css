@@ -19,3 +19,9 @@
 .link-style a:hover{
     color: firebrick;
 }
+
+.theme-btn{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}

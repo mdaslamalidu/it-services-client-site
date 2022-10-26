@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,11 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UseContext';
 import "./Header.css";
-import { FaUser, IconName } from "react-icons/fa";
+import { FaMoon, FaSun, FaUser, IconName } from "react-icons/fa";
 
 
 const Header = () => {
     const { user, logout } = useContext(AuthContext)
+    const [theme, setTheme] = useState(false)
 
     const handleLogout = () => {
         logout().then(() => {
@@ -48,6 +49,10 @@ const Header = () => {
                                     :
                                     <FaUser></FaUser>
                             }
+
+                        <button className='theme-btn' onClick={() => setTheme(!theme)}>
+                            {theme? <FaMoon></FaMoon> : <FaSun></FaSun>}
+                        </button>
 
                         {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_JMhOGTiIiNQt0WyWI5rhTA6Qlbi92BM0wbrkC7k&s */}
                     </Nav>

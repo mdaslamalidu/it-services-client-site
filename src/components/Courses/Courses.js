@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import SideNavbar from '../SideNavbar/SideNavbar';
 import "./Courses.css";
 
+
 const Courses = () => {
     const courses = useLoaderData();
     return (
@@ -21,11 +22,8 @@ const Courses = () => {
                             }
                         </div>
                     </Col>
-                   
                 </Row>
             </Container>
-           
-            
         </div>
     );
 };
