@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Checkout = () => {
     const checkout = useLoaderData();
-    const {img, name, title } = checkout;
+    const {img, name } = checkout;
     return (
         <div className='w-50 mx-auto text-center'>
             <h1>Thank yor for your <span className='text-warning'>{name}</span> course</h1>

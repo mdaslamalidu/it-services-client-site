@@ -6,6 +6,7 @@ const Course = () => {
     const { img, title, desc, name, duration, price, _id } = singleCourse;
     return (
         <div>
+            <div className='text-end mt-3 me-3'><button className='btn btn-danger'>Download Pdf</button></div>
              <div className='d-flex w-75 mx-auto mt-5'>
                 <div className="p-5 w-75">
                     <h2 className='fs-4 text-danger'>Welcome to Course details page!!!!!</h2>

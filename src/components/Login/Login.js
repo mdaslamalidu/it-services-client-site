@@ -2,12 +2,16 @@ import { signInWithPopup } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/UseContext';
 import "./Login.css";
 
 const Login = () => {
     const { signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -22,6 +26,7 @@ const Login = () => {
         signInWithGoogle()
         .then(result => {
             const user = result.user;
+            navigate(from, {replace : true})
             toast.success("SuccessFully Sign In with google")
         })
         .catch(error => {
@@ -33,6 +38,7 @@ const Login = () => {
         signInWithGithub()
         .then(result => {
             const user = result.user;
+            navigate(from, { replace: true })
             toast.success("sign in with github")
         })
         .catch(error => {

@@ -34,7 +34,7 @@ const Header = () => {
                         <Link to="/faq">Faq</Link>
                         <Link to="/blog">Blog</Link>
                         {
-                            user?.email ? 
+                            user?.uid ? 
                             <Link onClick={handleLogout}>Logout</Link>
                             :
                             <>
