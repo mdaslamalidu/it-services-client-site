@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,7 +9,7 @@ import { AuthContext } from '../../../Context/UseContext';
 
 const Header = () => {
     const {user} = useContext(AuthContext)
-
+    console.log(user)
     return (
         <Navbar bg="light" expand="lg" className='sticky-top'>
             <Container>
@@ -29,9 +29,15 @@ const Header = () => {
                                     <Link to="/register">Register</Link>
                             </>
                         }
+                        
+                            {
+                                user?.photoURL ?
+                                    <p>{user.photoURL}</p>
+                                    :
+                                    <p>photo nai</p>
+                            }
 
-                        
-                        
+                        {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_JMhOGTiIiNQt0WyWI5rhTA6Qlbi92BM0wbrkC7k&s */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
