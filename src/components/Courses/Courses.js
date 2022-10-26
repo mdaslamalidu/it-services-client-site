@@ -12,7 +12,7 @@ const Courses = () => {
         <div>
             <Container>
                 <Row>
-                    <Col xl={3} className="d-none d-lg-block">
+                    <Col xl={3}>
                         <SideNavbar></SideNavbar>
                     </Col>
                     <Col xl={9}>

@@ -7,3 +7,10 @@
 .card-img {
     height: 200px;
 }
+
+@media screen and (max-width: 680px) {
+    .grid-style {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

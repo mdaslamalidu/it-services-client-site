@@ -1,0 +1,15 @@
+.checkout-page{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.checkout-page img{
+    width: 100%;
+}
+
+@media screen and (max-width: 680px) {
+    .checkout-page{
+        width: 100%;
+        padding: 15px;
+    }
+}
