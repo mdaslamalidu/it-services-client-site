@@ -1,15 +1,31 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SummaryCart from '../pages/SummaryCart/SummaryCart';
+import { Container, Row, Col } from "react-bootstrap";
+import SideNavbar from '../SideNavbar/SideNavbar';
+import "./Courses.css";
 
 const Courses = () => {
     const courses = useLoaderData();
-    console.log(courses)
     return (
-        <div className='grid-style'>
-            {
-                courses.map(course => <SummaryCart key={course.id} course={course}></SummaryCart>)
-            }
+        <div>
+            <Container>
+                <Row>
+                    <Col xl={3} className="d-none d-lg-block">
+                        <SideNavbar></SideNavbar>
+                    </Col>
+                    <Col xl={9}>
+                        <div className='grid-style'>
+                            {
+                                courses.map(course => <SummaryCart key={course.id} course={course}></SummaryCart>)
+                            }
+                        </div>
+                    </Col>
+                   
+                </Row>
+            </Container>
+           
+            
         </div>
     );
 };

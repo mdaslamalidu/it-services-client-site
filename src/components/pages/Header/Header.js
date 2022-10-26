@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <Navbar expand="lg" className='sticky-top header-style'>
             <Container>
-                <Link to="/home" className='header-title'>
+                <Link to="/" className='header-title'>
                     <img style={{ height: "50px", borderRadius: "50%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrt6dYZqH63buWQAacIJDXWO4KAt6-exrwg&usqp=CAU" alt="" />
                    It Survices Institute
                 </Link>
