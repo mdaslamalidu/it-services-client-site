@@ -8,12 +8,20 @@ import { AuthContext } from '../../../Context/UseContext';
 
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
-    console.log(user)
+    const { user, logout } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        logout().then(() => {
+            alert("logout")
+        })
+        .catch(error => alert(error.message))
+    }
+
     return (
         <Navbar bg="light" expand="lg" className='sticky-top'>
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <img style={{ height: "50px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrt6dYZqH63buWQAacIJDXWO4KAt6-exrwg&usqp=CAU" alt="" />
+                <Navbar.Brand href="#home">It Survices Institute</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
                     <Nav>
@@ -22,7 +30,7 @@ const Header = () => {
                         <Nav.Link href="#link">Blog</Nav.Link>
                         {
                             user?.email ? 
-                            <Button>Logout</Button>
+                            <p onClick={handleLogout}>Logout</p>
                             :
                             <>
                                     <Link to="/login">Login</Link>
@@ -32,7 +40,7 @@ const Header = () => {
                         
                             {
                                 user?.photoURL ?
-                                    <p>{user.photoURL}</p>
+                                    <Image title={user?.displayName} roundedCircle src={user.photoURL} style={{height: "40px", width: "40px", cursor: "pointer"}}></Image>
                                     :
                                     <p>photo nai</p>
                             }
