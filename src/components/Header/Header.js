@@ -4,9 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../Context/UseContext';
 import "./Header.css";
-import { FaMoon, FaSun, FaUser, IconName } from "react-icons/fa";
+import { FaMoon, FaSun, FaUser } from "react-icons/fa";
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../Context/UseContext';
 
 
 const Header = () => {
@@ -15,9 +16,9 @@ const Header = () => {
 
     const handleLogout = () => {
         logout().then(() => {
-            alert("logout")
+            toast.success("successfully logout")
         })
-        .catch(error => alert(error.message))
+        .catch(error => toast.error(error.message))
     }
 
     return (

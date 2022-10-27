@@ -19,8 +19,6 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-
-
         if (!/\S+@\S+\.\S+/.test(email)) {
             setError("Please give a valid Email")
             return;
@@ -47,7 +45,9 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user)
+            toast.success("congratulations your new account!!")
             userProfileUpdate(name, photoURL)
+            form.reset()
         })
         .catch(error => {
             console.error(error)
@@ -115,7 +115,7 @@ const Register = () => {
                 <button style={{backgroundColor: "black", color: "white",}} className='btn btn-black w-100 py-2 mt-3' type="submit" disabled={!accept}>
                     Register
                 </button>
-                
+                <p className='mt-2'>Already Have An Account? <Link to="/login">Login</Link></p>
             </Form>
 
             <p className='login-pera'>or</p>

@@ -4,11 +4,12 @@ import "./Checkout.css";
 
 const Checkout = () => {
     const checkout = useLoaderData();
-    const {img, name } = checkout;
+    const { img, name } = checkout;
     return (
-        <div className='checkout-page'>
-            <h1>Thank yor for your <span className='text-warning'>{name}</span> course</h1>
-            <img src={img} alt="" className='rounded'/>
+        <div className='checkout-page text-center'>
+            <h1>Thank you for your course</h1>
+            <h3>You Have Selected For <span className='bg-danger px-3 py-2 rounded text-white'>{name}</span></h3>
+            <img src={img} alt="" className='rounded' />
             <Link to="/courses" className='d-block'><button className='btn btn-danger mt-5'>Back to your courses</button></Link>
         </div>
     );

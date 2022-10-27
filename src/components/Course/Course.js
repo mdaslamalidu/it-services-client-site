@@ -25,18 +25,18 @@ const Course = () => {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZNimJx83Q3teTeZtZn9xwK608k1B2nM3Ow&usqp=CAU" alt="" />
              </div>
             <div className='courseDetailsContainer' ref={ref}>
-                    <h1 className='text-danger mt-5 text-center mb-4'>About Course</h1>
+                    <h1 className='text-danger mt-2 text-center mb-5'>About This Course</h1>
                     <div className='courseDetails'>
                         <img src={img} className="rounded"/>
                         <div className='course-items'>
-                            <h5>Course Title: <small>{title}</small></h5>
-                            <h5>Course Name: <small>{name}</small></h5>
-                            <h5>Course Price: <small>{price} $</small></h5>
-                            <h5>Course Duration: <small>{duration} Months</small></h5>
-                        <Link to={`/checkout/${_id}`}><button className='btn btn-warning py-0 mt-2 w-75 fs-5'>CheckOut</button></Link>
+                            <h5>Title: <small>{title}</small></h5>
+                            <h5>Name: <small>{name}</small></h5>
+                            <h5>Price: <small>{price} $</small></h5>
+                            <h5>Duration: <small>{duration} Months</small></h5>
+                        <Link to={`/checkout/${_id}`}><button className='btn btn-danger py-1 mt-2 w-75 fs-5'>Premium Access</button></Link>
                         </div>
                     </div>
-                    <p className='mt-4 bg-danger text-white p-2 fs-5'>
+                    <p className='mt-4 fs-5'>
                         {desc}
                     </p>
                 </div>

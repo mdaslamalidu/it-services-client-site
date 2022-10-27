@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.checkout-page span{
+    font-size: 25px;
+}
+
 @media screen and (max-width: 680px) {
     .checkout-page{
         width: 100%;

@@ -13,10 +13,10 @@ const SideNavbar = () => {
     }, [])
 
     return (
-        <div className='bg-black text-white p-2 sticky-top-style'>
-            <h3>Course Title: </h3>
+        <div className='text-white p-2 sticky-top-style'>
+            <h3 className='mb-3'>Course Name: </h3>
             {
-                categories.map(category => <Link to={`/singleCourse/${category.id}`} style={{ textDecoration: "none", color: "black", }} key={category.id}> <p className='bg-warning rounded p-2 hover-style'>{category.name}</p></Link>   
+                categories.map(category => <Link to={`/singleCourse/${category.id}`} style={{ textDecoration: "none", color: "black", }} key={category.id}> <p className='bg-danger text-white rounded p-2'>{category.name}</p></Link>   
                 )
             }
         </div>

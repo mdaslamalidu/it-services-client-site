@@ -4,5 +4,8 @@
 
 .sticky-top-style{
     position: sticky;
-    top: 52px;
+    top: 63px;
+    background-color: rgb(46, 45, 45);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
