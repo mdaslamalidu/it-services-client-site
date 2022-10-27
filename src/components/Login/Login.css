@@ -65,3 +65,10 @@
     top: 50%;
     position: absolute;
 }
+
+
+@media screen and (max-width: 680px) {
+    .form-style{
+        width: 100%;
+    }
+}

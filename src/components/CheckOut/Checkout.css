@@ -9,11 +9,22 @@
 
 .checkout-page span{
     font-size: 25px;
+    padding: 3px 5px;
+}
+
+.checkout-page h1 {
+    margin:20px 0px;
 }
 
 @media screen and (max-width: 680px) {
     .checkout-page{
         width: 100%;
         padding: 15px;
+    }
+
+    .checkout-page span{
+        margin-top: 0px;
+        padding: 0px;
+        font-size: 18px;
     }
 }
