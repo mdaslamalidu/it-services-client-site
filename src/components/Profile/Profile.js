@@ -4,7 +4,7 @@ import { AuthContext } from '../../Context/UseContext';
 const Profile = () => {
     const {user} = useContext(AuthContext);
     return (
-        <div style={{height: "500px"}} className='d-flex justify-content-center align-items-center'>
+        <div style={{height: "500px"}} className='d-flex justify-content-center align-items-center my-5'>
             {
                 user?.uid ? 
                 <div>

@@ -14,7 +14,7 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div>
-                    <h5 className='fs-6'>All Right Resarved by Md Aslam</h5>
+                    <h5 className='fs-6'>All Rights Reserved by Md Aslam</h5>
                 </div>
                 <div>
                     <a href="https://www.facebook.com/mdaslamalidu"><FaFacebook></FaFacebook></a>
