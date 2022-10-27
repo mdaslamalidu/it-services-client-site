@@ -24,7 +24,7 @@ const Course = () => {
                 </div>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZNimJx83Q3teTeZtZn9xwK608k1B2nM3Ow&usqp=CAU" alt="" />
              </div>
-            <div className='courseDetailsContainer' ref={ref}>
+            <div className='courseDetailsContainer mb-5' ref={ref}>
                     <h1 className='text-danger mt-2 text-center mb-5'>About This Course</h1>
                     <div className='courseDetails'>
                         <img src={img} className="rounded"/>

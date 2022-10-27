@@ -8,7 +8,7 @@ const SummaryCart = ({ course }) => {
     const { desc, title, name, _id, img } = course;
     return (
         <div>
-            <div>
+            <div className='mb-5'>
                 <Card className='shadow-lg'>
                     <Card.Img variant="top" src={img} className="card-img" />
                     <Card.Body>
