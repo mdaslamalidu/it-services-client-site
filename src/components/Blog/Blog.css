@@ -1,10 +1,10 @@
-.blog-page{
+.blog-page {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 40px;
 }
 
-.blog-page div{
+.blog-page div {
     margin: 15px;
     border: 2px solid rgb(233, 227, 227);
     padding: 15px;
@@ -12,10 +12,19 @@
     border-radius: 8px;
 }
 
-.blog-page h2{
+.blog-page h2 {
     font-size: 22px;
 }
 
-.blog-page p{
+.blog-page p {
     font-size: 18px;
+}
+
+
+@media screen and (max-width: 680px) {
+    .blog-page {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px;
+    }
 }

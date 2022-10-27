@@ -8,7 +8,7 @@ const Profile = () => {
             {
                 user?.uid ? 
                 <div>
-                    <h2>{user?.displayName}</h2>
+                    <h2 className='text-center'>{user?.displayName}</h2>
                     <img className='w-100 rounded-circle' src={user?.photoURL} alt="" />
                 </div>
                 : 

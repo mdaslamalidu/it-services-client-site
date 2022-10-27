@@ -28,7 +28,7 @@ const Header = () => {
                     <img style={{ height: "50px", borderRadius: "50%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrt6dYZqH63buWQAacIJDXWO4KAt6-exrwg&usqp=CAU" alt="" />
                    It Survices Institute
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
                     <Nav className='link-style align-items-center'>
                         <Link to="/home">Home</Link>
