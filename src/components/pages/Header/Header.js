@@ -30,6 +30,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
                     <Nav className='link-style align-items-center'>
+                        <Link to="/home">Home</Link>
                         <Link to="/courses">Courses</Link>
                         <Link to="/faq">Faq</Link>
                         <Link to="/blog">Blog</Link>
