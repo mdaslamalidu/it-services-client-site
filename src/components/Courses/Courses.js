@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import SummaryCart from '../pages/SummaryCart/SummaryCart';
+import SummaryCart from '../SummaryCart/SummaryCart';
 import { Container, Row, Col } from "react-bootstrap";
 import SideNavbar from '../SideNavbar/SideNavbar';
 import "./Courses.css";
@@ -18,7 +18,7 @@ const Courses = () => {
                     <Col xl={9}>
                         <div className='grid-style'>
                             {
-                                courses.map(course => <SummaryCart key={course.id} course={course}></SummaryCart>)
+                                courses.map(course => <SummaryCart key={course._id} course={course}></SummaryCart>)
                             }
                         </div>
                     </Col>
