@@ -7,6 +7,7 @@ import Errorpage from "../components/Errorpage/Errorpage";
 import FAQ from "../components/FAQ/FAQ";
 import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
+import Profile from "../components/Profile/Profile";
 import Register from "../components/Register/Register";
 import Main from "../Layout/Main";
 import PrivateRoute from "./PrivateRoute";
@@ -55,6 +56,10 @@ export const routes = createBrowserRouter([
         {
             path: "/faq",
             element: <FAQ></FAQ>
+        },
+        {
+            path: "/profile",
+            element: <Profile></Profile>
         }
     ]
    }

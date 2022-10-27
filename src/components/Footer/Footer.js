@@ -18,9 +18,9 @@ const Footer = () => {
                     <h5 className='fs-6'>All Right Resarved by Md Aslam</h5>
                 </div>
                 <div>
-                    <FaFacebook></FaFacebook>
-                    <FaTwitter className='mx-4'></FaTwitter>
-                    <FaGithub></FaGithub>
+                    <a href="https://www.facebook.com/mdaslamalidu"><FaFacebook></FaFacebook></a>
+                    <a href="https://twitter.com/MdAslam19990"><FaTwitter className='mx-4'></FaTwitter></a>
+                    <a href="https://github.com/mdaslamalidu"><FaGithub></FaGithub></a>
                 </div>
             </Container>
         </div>

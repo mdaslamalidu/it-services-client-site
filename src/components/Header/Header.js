@@ -44,13 +44,15 @@ const Header = () => {
                                     <Link to="/register">Register</Link>
                             </>
                         }
-                        
+                        <Link to="/profile">
+
                             {
                                 user?.photoURL ?
-                                    <Image title={user?.displayName} roundedCircle src={user.photoURL} style={{height: "40px", width: "40px", cursor: "pointer"}}></Image>
+                                    <Image title={user?.displayName} roundedCircle src={user.photoURL} style={{ height: "40px", width: "40px", cursor: "pointer" }}></Image>
                                     :
                                     <FaUser></FaUser>
                             }
+                        </Link>
 
                         <button className='theme-btn' onClick={() => setTheme(!theme)}>
                             {theme? <FaMoon></FaMoon> : <FaSun></FaSun>}
