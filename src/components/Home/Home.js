@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className='home-container'>
             <div className='left-side'>
-                <h1>Build Your Carrer<br/> <span className='text-danger'>With The Best One</span></h1>
+                <h1>Build Your Carrier<br/> <span className='text-danger'>With The Best One</span></h1>
                 <Link to="/courses"><button className='btn btn-danger px-5'>Our Courses</button></Link>
             </div>
             <div className='right-side'>
