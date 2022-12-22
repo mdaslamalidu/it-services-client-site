@@ -5,7 +5,7 @@ import "./Profile.css";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="d-flex justify-content-center align-items-center my-5 profile-page">
+    <div className="d-flex justify-content-center align-items-center py-5 profile-page">
       {user?.uid ? (
         <div>
           <h2 className="text-center">{user?.displayName}</h2>
