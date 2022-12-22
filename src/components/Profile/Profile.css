@@ -1,0 +1,5 @@
+.profile-page {
+  height: 500px;
+  background-color: var(--bg-clr);
+  color: var(--header-color);
+}
