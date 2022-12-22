@@ -24,6 +24,18 @@
   color: white;
 }
 
+.dark-theme {
+  --bg-clr: #111b20;
+  --header-color: #2e2d2d;
+  --header-title: white;
+}
+
+.light-theme {
+  --bg-clr: #ffffff;
+  --header-color: rgb(236, 230, 230);
+  --header-title: black;
+}
+
 .App-link {
   color: #61dafb;
 }

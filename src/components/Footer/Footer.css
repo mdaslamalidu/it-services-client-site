@@ -1,0 +1,7 @@
+.footerStyle {
+  background-color: var(--header-color);
+}
+
+.footer-title {
+  color: var(--header-title);
+}
