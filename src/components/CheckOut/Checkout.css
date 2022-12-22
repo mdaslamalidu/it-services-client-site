@@ -1,30 +1,39 @@
-.checkout-page{
-    width: 50%;
-    margin: 100px auto;
+.checkout-page {
+  width: 50%;
+  margin: 0px auto;
 }
 
-.checkout-page img{
-    width: 100%;
+.checkout-bg-color {
+  background-color: var(--bg-clr);
+  padding: 100px 0px;
 }
 
-.checkout-page span{
-    font-size: 25px;
-    padding: 3px 5px;
+.checkout-page img {
+  width: 100%;
+}
+
+.checkout-page span {
+  font-size: 25px;
+  padding: 3px 5px;
+}
+
+.checkout-title {
+  color: var(--header-title);
 }
 
 .checkout-page h1 {
-    margin:20px 0px;
+  margin: 20px 0px;
 }
 
 @media screen and (max-width: 680px) {
-    .checkout-page{
-        width: 100%;
-        padding: 15px;
-    }
+  .checkout-page {
+    width: 100%;
+    padding: 15px;
+  }
 
-    .checkout-page span{
-        margin-top: 0px;
-        padding: 0px;
-        font-size: 18px;
-    }
+  .checkout-page span {
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 18px;
+  }
 }

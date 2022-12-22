@@ -1,16 +1,20 @@
 .grid-style {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.bg-color {
+  background-color: var(--bg-clr);
 }
 
 .card-img {
-    height: 200px;
+  height: 200px;
 }
 
 @media screen and (max-width: 680px) {
-    .grid-style {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .grid-style {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
